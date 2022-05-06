@@ -1,7 +1,9 @@
+import UseStateExample from './files/UseStateExample'
+
 function App() {
   return (
     <div className='container'>
-      <h2>Helloo world!!</h2>
+      <UseStateExample />
     </div>
   )
 }
