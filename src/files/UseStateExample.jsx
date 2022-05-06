@@ -17,6 +17,7 @@ function UseStateExample() {
     age: 29,
     profile: 'Developer',
   })
+  const [value, setValue] = useState(0)
 
   const handleClick = () => {
     if (text === 'Learning React') {
@@ -35,6 +36,14 @@ function UseStateExample() {
   const changeMessage = () => {
     //the spread operator copies the first two values as it is and changes only profile
     setHuman({ ...human, profile: 'Full Stack Web Developer' })
+  }
+
+  const complexIncrease = () => {
+    setTimeout(() => {
+      setValue((prevState) => {
+        return prevState + 1
+      })
+    }, 2000)
   }
 
   return (
@@ -57,12 +66,22 @@ function UseStateExample() {
         Clear Items
       </button>
 
-      <h3>{human.name}</h3>
-      <h3>{human.age}</h3>
-      <h3>{human.profile}</h3>
-      <button className='btn' onClick={changeMessage}>
-        CHANGE
-      </button>
+      <div style={{ padding: '2rem 0' }}>
+        <h3>{human.name}</h3>
+        <h3>{human.age}</h3>
+        <h3>{human.profile}</h3>
+        <button className='btn' onClick={changeMessage}>
+          CHANGE
+        </button>
+      </div>
+
+      <div style={{ padding: '2rem 0' }}>
+        <h3>Complex Counter</h3>
+        <h3>{value}</h3>
+        <button className='btn' onClick={complexIncrease}>
+          INCREASE
+        </button>
+      </div>
     </>
   )
 }
