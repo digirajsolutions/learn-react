@@ -5,7 +5,8 @@
 // import ShortCircuit from './files/ShortCircuit'
 // import ShowHide from './files/ShowHide'
 // import ControlledInputs from './files/ControlledInputs'
-import MultipleInputs from './files/MultipleInputs'
+// import MultipleInputs from './files/MultipleInputs'
+import UseRefExample from './files/UseRefExample'
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/* <ShortCircuit /> */}
       {/* <ShowHide /> */}
       {/* <ControlledInputs /> */}
-      <MultipleInputs />
+      {/* <MultipleInputs /> */}
+      <UseRefExample />
     </div>
   )
 }
