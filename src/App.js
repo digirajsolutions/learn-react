@@ -1,9 +1,11 @@
-import UseStateExample from './files/UseStateExample'
+// import UseStateExample from './files/UseStateExample'
+import UseEffectExample from './files/UseEffectExample'
 
 function App() {
   return (
     <div className='container'>
-      <UseStateExample />
+      {/* <UseStateExample /> */}
+      <UseEffectExample />
     </div>
   )
 }
