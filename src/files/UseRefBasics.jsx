@@ -2,14 +2,14 @@ import React, { useState, useRef, useEffect } from 'react'
 
 //useRef preserves the value between the renders and does not trigger re-render
 //we can target DOM nodes/elements
-function UseRefExample() {
+function UseRefBasics() {
   const refContainer = useRef(null)
-  const divContainer = useRef(null)
+  // const divContainer = useRef(null)
 
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(refContainer.current.value)
-    console.log(divContainer.current)
+    // console.log(divContainer.current)
   }
 
   useEffect(() => {
@@ -31,4 +31,4 @@ function UseRefExample() {
   )
 }
 
-export default UseRefExample
+export default UseRefBasics

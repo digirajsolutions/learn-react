@@ -6,7 +6,8 @@
 // import ShowHide from './files/ShowHide'
 // import ControlledInputs from './files/ControlledInputs'
 // import MultipleInputs from './files/MultipleInputs'
-import UseRefExample from './files/UseRefExample'
+// import UseRefBasics from "./files/UseRefBasics"
+import UseReducerBasics from './files/UseReducerBasics'
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       {/* <ShowHide /> */}
       {/* <ControlledInputs /> */}
       {/* <MultipleInputs /> */}
-      <UseRefExample />
+      {/* <UseRefExample /> */}
+      <UseReducerBasics />
     </div>
   )
 }
