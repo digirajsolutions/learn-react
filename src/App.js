@@ -2,7 +2,8 @@
 // import UseEffectExample from './files/UseEffectExample'
 // import UseEffectFetchData from './files/UseEffectFetchData'
 // import MultipleReturns from './files/MultipleReturns'
-import ShortCircuit from './files/ShortCircuit'
+// import ShortCircuit from './files/ShortCircuit'
+import ShowHide from './files/ShowHide'
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <UseEffectExample /> */}
       {/* <UseEffectFetchData /> */}
       {/* <MultipleReturns /> */}
-      <ShortCircuit />
+      {/* <ShortCircuit /> */}
+      <ShowHide />
     </div>
   )
 }
