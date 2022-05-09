@@ -1,0 +1,40 @@
+import { useState, useEffect } from 'react'
+
+const url = 'https://api.github.com/users'
+
+function UseEffectFetchData() {
+  const [users, setUsers] = useState([])
+  const getUsers = async () => {
+    const response = await fetch(url)
+    const users = await response.json()
+    setUsers(users)
+    // console.log(users)
+  }
+
+  //useEffect does not return a promise. So we cannot use async await on hook directly
+  useEffect(() => {
+    getUsers()
+  }, [])
+
+  return (
+    <>
+      <h3>Github Users</h3>
+      <ul className='users'>
+        {users.map((user) => {
+          const { id, login, avatar_url, html_url } = user
+          return (
+            <li key={id}>
+              <img src={avatar_url} alt={login} />
+              <div>
+                <h4>{login}</h4>
+                <a href={html_url}>Visit Profile</a>
+              </div>
+            </li>
+          )
+        })}
+      </ul>
+    </>
+  )
+}
+
+export default UseEffectFetchData

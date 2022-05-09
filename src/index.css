@@ -266,7 +266,7 @@ p {
   align-items: center;
   background: var(--clr-white);
   padding: 1rem 2rem;
-  border-radius: var(--radius);
+  border-radius: 1rem;
   text-align: left;
 }
 .users img {
