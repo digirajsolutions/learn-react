@@ -3,7 +3,8 @@
 // import UseEffectFetchData from './files/UseEffectFetchData'
 // import MultipleReturns from './files/MultipleReturns'
 // import ShortCircuit from './files/ShortCircuit'
-import ShowHide from './files/ShowHide'
+// import ShowHide from './files/ShowHide'
+import ControlledInputs from './files/ControlledInputs'
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <UseEffectFetchData /> */}
       {/* <MultipleReturns /> */}
       {/* <ShortCircuit /> */}
-      <ShowHide />
+      {/* <ShowHide /> */}
+      <ControlledInputs />
     </div>
   )
 }
