@@ -1,35 +1,40 @@
 import React, { useState } from 'react'
 
-function ControlledInputs() {
-  const [firstName, setFirstName] = useState('')
-  const [email, setEmail] = useState('')
+function MultipleInputs() {
+  const [person, setPerson] = useState({
+    firstName: '',
+    email: '',
+    age: '',
+  })
   const [people, setPeople] = useState([])
+
+  const handleChange = (e) => {
+    const name = e.target.name
+    const value = e.target.value
+    setPerson({ ...person, [name]: value })
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (firstName && email) {
-      const person = { id: new Date().getTime().toString(), firstName, email }
-      setPeople((people) => {
-        return [...people, person]
-      })
-
-      setFirstName('')
-      setEmail('')
+    if (person.firstName && person.email && person.age) {
+      const newPerson = { ...person, id: new Date().getTime().toString() }
+      setPeople([...people, newPerson])
+      setPerson({ firstName: '', email: '', age: '' })
     }
   }
 
   return (
     <>
       <article>
-        <form className='form' onSubmit={handleSubmit}>
+        <form className='form'>
           <div className='form-control'>
             <label htmlFor='firstName'>Name: </label>
             <input
               type='text'
               id='firstName'
               name='firstName'
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
+              value={person.firstName}
+              onChange={handleChange}
             />
           </div>
 
@@ -39,8 +44,8 @@ function ControlledInputs() {
               type='text'
               id='email'
               name='email'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={person.email}
+              onChange={handleChange}
             />
           </div>
 
@@ -50,18 +55,21 @@ function ControlledInputs() {
               type='text'
               id='age'
               name='age'
-              value={age}
-              onChange={(e) => setAge(e.target.value)}
+              value={person.age}
+              onChange={handleChange}
             />
           </div>
-          <button type='submit'>Add Person</button>
+          <button type='submit' onClick={handleSubmit}>
+            Add Person
+          </button>
         </form>
 
         {people.map((person) => {
-          const { id, firstName, email } = person
+          const { id, firstName, email, age } = person
           return (
-            <div id={id} className='item'>
+            <div id={id} className='item' key={id}>
               <h4>{firstName}</h4>
+              <p>{age}</p>
               <p>{email}</p>
             </div>
           )
@@ -71,4 +79,4 @@ function ControlledInputs() {
   )
 }
 
-export default ControlledInputs
+export default MultipleInputs
