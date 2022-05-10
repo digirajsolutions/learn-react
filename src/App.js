@@ -7,7 +7,8 @@
 // import ControlledInputs from './files/ControlledInputs'
 // import MultipleInputs from './files/MultipleInputs'
 // import UseRefBasics from "./files/UseRefBasics"
-import UseReducerBasics from './files/UseReducerBasics'
+// import UseReducerBasics from './files/UseReducerBasics'
+import PropDrilling from './files/PropDrilling'
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
       {/* <ControlledInputs /> */}
       {/* <MultipleInputs /> */}
       {/* <UseRefExample /> */}
-      <UseReducerBasics />
+      {/* <UseReducerBasics /> */}
+      <PropDrilling />
     </div>
   )
 }
