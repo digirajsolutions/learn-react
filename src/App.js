@@ -8,7 +8,8 @@
 // import MultipleInputs from './files/MultipleInputs'
 // import UseRefBasics from "./files/UseRefBasics"
 // import UseReducerBasics from './files/UseReducerBasics'
-import PropDrilling from './files/PropDrilling'
+// import PropDrilling from './files/PropDrilling'
+import ContextAPI from './files/ContextAPI'
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       {/* <MultipleInputs /> */}
       {/* <UseRefExample /> */}
       {/* <UseReducerBasics /> */}
-      <PropDrilling />
+      {/* <PropDrilling /> */}
+      <ContextAPI />
     </div>
   )
 }
